@@ -8,8 +8,7 @@ Live site: [your Vercel link]
 
 Shows the full pizza menu with a photo, name, ingredients and price for each pizza
 
-Checks the current time and shows whether the shop is open (10am – 10pm)
-When open: shows the tagline, “We’re currently open” and an Order button
+Checks the current time and shows whether the shop is open (10am – 10pm)When open: shows the tagline, “We’re currently open” and an Order button
 
 When closed: hides the tagline and shows “Sorry, we’re closed”
 
@@ -23,14 +22,7 @@ Works on phones as well as laptops
 
 I split the page into small components so each part has its own job:
 
-App
-├── Header
-├── Menu
-│   ├── MenuControls (search + favourites button)
-│   └── Pizza (one for each pizza)
-└── Footer
-    └── Order (only shown when open)
-The React things I used:
+App├── Header├── Menu│ ├── MenuControls (search + favourites button)│ └── Pizza (one for each pizza)└── Footer└── Order (only shown when open)The React things I used:
 
 Components and props – one Pizza component is reused for every pizza, and the data is passed in as a prop
 
@@ -68,11 +60,9 @@ Media queries switch to one column on tablets and stack the details on phones
 
 ## Running it locally
 
-npm install
-npm start
-Then open http://localhost:3000
+npm installnpm startThen open http://localhost:3000
 
 ## Hosting
 
-Hosted on Vercel, connected to this GitHub repo, so every push updates the live site.
+Hosted on Vercel https://pizza-menu-application-theta.vercel.app , connected to this GitHub repo, so every push updates the live site.
 
