@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap");
+
+/* ===== COLOUR THEME: tomato + basil + cream ===== */
+:root {
+  --cream: #fbf4e8;
+  --card: #fffaf2;
+  --tomato: #d8432c;
+  --tomato-dark: #b5321e;
+  --basil: #3f7d4e;
+  --ink: #2b2420;
+  --muted: #8a7f76;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  color: var(--ink);
+  font-weight: 400;
+  background-color: var(--cream);
+  border-top: 0.8rem solid var(--tomato);
+  border-bottom: 1.6rem solid var(--basil);
+  min-height: 100vh;
+  padding: 3.2rem;
+  padding-bottom: 6rem;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+/* ===== HEADER ===== */
+.header {
+  align-self: stretch;
+}
+
+.header h1 {
+  color: var(--tomato);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5.2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+/* ===== MENU ===== */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  width: 100%;
+}
+
+.menu h2 {
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 2px solid var(--basil);
+  border-bottom: 2px solid var(--basil);
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--basil);
+}
+
+/* ===== SEARCH + FAVOURITES BAR ===== */
+.controls {
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 56rem;
+}
+
+.controls input {
+  flex: 1;
+  font-family: inherit;
+  font-size: 1.4rem;
+  padding: 1.2rem 1.6rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background-color: var(--card);
+  color: var(--ink);
+}
+
+.controls input:focus {
+  outline: none;
+  border-color: var(--tomato);
+}
+
+.fav-filter {
+  font-family: inherit;
+  font-size: 1.3rem;
+  padding: 1.2rem 1.8rem;
+  border: 2px solid var(--tomato);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--tomato);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.fav-filter:hover,
+.fav-filter.active {
+  background-color: var(--tomato);
+  color: #fff;
+}
+
+.empty {
+  font-size: 1.5rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Hides the label visually but keeps it for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ===== PIZZA GRID ===== */
+.pizzas {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 4.8rem;
+  width: 100%;
+}
+
+.pizza {
+  display: flex;
+  gap: 2.4rem;
+  padding: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.pizza:hover {
+  background-color: var(--card);
+  transform: translateY(-3px);
+}
+
+.pizza img {
+  width: 12rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+  align-self: start;
+}
+
+/* name | ingredients | price, side by side like the sample */
+.pizza-info {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1.6rem;
+  align-items: start;
+  padding-top: 0.4rem;
+}
+
+.pizza-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.pizza h3 {
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.pizza p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--tomato);
+}
+
+.fav-btn {
+  font-size: 2rem;
+  line-height: 1;
+  background: none;
+  border: none;
+  color: var(--tomato);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.fav-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: var(--tomato);
+  border: none;
+  border-radius: 999px;
+  padding: 1.4rem 4rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--tomato-dark);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+  .pizzas {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .header h1 {
+    font-size: 3.6rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .pizza {
+    gap: 1.6rem;
+    padding: 0.8rem 0;
+  }
+
+  .pizza img {
+    width: 9rem;
+  }
+
+  /* Stack name, ingredients, price on small phones */
+  .pizza-info {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
