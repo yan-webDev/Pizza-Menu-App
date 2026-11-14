@@ -2,7 +2,7 @@
 
 A pizza menu website I built with React for C304 Cloud Application Development.
 
-Live site: [your Vercel link]
+
 
 ## What it does
 
